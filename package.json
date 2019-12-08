@@ -1,10 +1,10 @@
 {
-    "name": "showal invest",
+    "name": "showalnvest",
     "version": "1.0.0",
     "description": "showal made again",
     "main": "index.js",
     "scripts": {
-        "compile:sass": "node-sass main.scss first.css -w"
+        "compile:sass": "node-sass main1.scss first.css -w"
     },
     "author": "Tobi",
     "license": "ISC",
