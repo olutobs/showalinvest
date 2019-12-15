@@ -4,14 +4,22 @@
     "description": "showal made again",
     "main": "index.js",
     "scripts": {
-        "compile:sass": "node-sass main1.scss first.css -w"
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "author": "Tobi",
     "license": "ISC",
     "devDependencies": {
-        "node-sass": "4.13.0"
+        "cross-env": "^6.0.3",
+        "node-sass": "4.13.0",
+        "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
-        "jquery": "3.4.1"
+        "jquery": "3.4.1",
+        "laravel-mix": "^5.0.0"
     }
 }
